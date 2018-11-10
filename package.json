@@ -1,0 +1,24 @@
+{
+  "name": "server-chat",
+  "version": "1.0.0",
+  "description": "server-chat-app",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "npm run build && node dist/index.js",
+    "test": "npm run build && mocha --require babel-register"
+  },
+  "author": "fabio perrone",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1"
+  }
+}
